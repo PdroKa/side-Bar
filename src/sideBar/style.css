@@ -1,0 +1,120 @@
+.container-side-bar {
+    background-color: rgb(99, 99, 99, .5);
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.side-bar {
+    background-color: rgb(255, 238, 0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    position: relative;
+
+}
+
+.side-bar {
+    -webkit-animation: open 1s linear ;
+    animation: open 1s linear;
+    padding: 8px 16px;
+}
+
+
+
+@-webkit-keyframes open {
+    from {
+        top: 0;
+        left: -250px;
+    }
+
+    to {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes open {
+    from {
+        top: 0;
+        left: -250px;
+    }
+
+    to {
+        top: 0;
+        left: 0;
+    }
+}
+
+@-moz-keyframes slideout {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -250px;
+    }
+}
+
+@-webkit-keyframes slideout {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -250px;
+    }
+}
+
+@keyframes slideout {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -250px;
+    }
+}
+
+
+
+.side-bar div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-close {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.btn-close::before,
+.btn-close::after {
+    content: " ";
+    left: 25px;
+    top: 0;
+    border-radius: 6px;
+    position: absolute;
+    width: 2.5px;
+    height: 24px;
+    background-color: #000;
+}
+
+.btn-close::before {
+    transform: rotate(45deg);
+}
+
+.btn-close::after {
+    transform: rotate(-45deg);
+}

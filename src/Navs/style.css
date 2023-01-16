@@ -1,0 +1,14 @@
+.btn-tools{
+    background: transparent;
+    padding: none;
+    margin: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.btn-tools img{
+    width: 25px;
+    height: 25px;
+}
