@@ -4,21 +4,15 @@ import tools from '../image/tools.svg'
 import './style.css'
 export function NavBar() {
     const [sideBar, setSideBar] = useState(false)
-    const openSide = () => setSideBar(!sideBar)
+    const openSide = () => setSideBar(!sideBar, console.log("ABERTO"))
 
     return (
         <div>
             <div className="container-nav-bar">
-                <button  onClick={openSide} className="btn-tools">
-                    <img src={tools} alt="Tools"/>
-                </button>
-
                 <h1>Logo</h1>
             </div>
-
-            {
-                sideBar ? <SideBar toogleModal={openSide} /> : null
-            }
+                <SideBar modal={sideBar} toogleModal={openSide} />
+                <h1>CONTEUDO</h1>
         </div>
     )
 }

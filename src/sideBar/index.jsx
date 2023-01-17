@@ -1,20 +1,22 @@
 import './style.css'
+import tools from '../image/tools.svg'
 
-
-export function SideBar({ id = 'modal', toogleModal }) {
+export function SideBar({ id = 'modal', toogleModal, modal }) {
     const outSideClick = (e) => e.target.id === id ? toogleModal() : null
 
     return (
-        <div id={id} className='container-side-bar' onClick={outSideClick}>
-            <div className='side-bar'>
-                <div>
-                    <h1>Logo</h1>
-                    <button onClick={toogleModal} className='btn-close' />
-                </div>
-                <h1>Side Bar</h1>
-                <h1>Item</h1>
-                <h1>Item</h1>
-            </div>
+        <div id={id} className={modal ? "container-side-bar" : ""} onClick={outSideClick}>
+            <aside className={`side-bar ${modal ? "open" : ""}`}>
+                <button className="sidebar-toogle" onClick={toogleModal}>
+                    {modal ? "/" : "="}
+                </button>
+                <h1>LOGO NFS</h1>
+                <p>TOOLS</p>
+                <p>TOOLS</p>
+                <p>TOOLS</p>
+                <p>CONFG</p>
+                <p>USER</p>
+            </aside>
         </div>
     )
 }
